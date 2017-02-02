@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns="http://www.fastconnect.com/mainInputJms" xmlns:xs="http://www.w3.org/2001/XMLSchema"  targetNamespace="http://www.fastconnect.com/mainInputJms" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="msgInfos" type="MsgInfosType"/> 
+	<xs:complexType name="MsgInfosType">
+        <xs:sequence>
+            <xs:element name="msgBody" type="xs:string" minOccurs="0"/>
+            <xs:element name="msgProperties" type="PropertiesType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+	<xs:complexType name="PropertiesType">
+        <xs:sequence>
+            <xs:element name="property" type="propertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+	<xs:complexType name="propertyType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+            <xs:element name="value" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

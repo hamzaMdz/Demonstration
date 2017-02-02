@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sca:composite xmlns:xmi="http://www.omg.org/XMI" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:property="http://ns.tibco.com/bw/property" xmlns:filepersistence="http://xsd.tns.tibco.com/bw/models/binding/soap/filepersistence" xmi:version="2.0" xmi:id="_RWdU8IF3EeaDU6T8_KZC2w" targetNamespace="http://tns.tibco.com/bw/composite/DemoApp-module" name="DemoApp-module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+    <sca:service xmi:id="_vslG3APrwZyyZgA0fW8uja" name="getServiceDemo" promote="SopaTestComponent/getServiceDemo">
+        <sca:interface.wsdl xmi:id="_OZUNkMh0Eea2gbRYRTtYvg" interface="fastconnect.org/test#wsdl.interface(ServiceDemo)" scaext:wsdlLocation="../Service%20Descriptors/ServiceDemo.wsdl"/>
+        <scaext:binding xmlns:wsdl_SopaTest="fastconnect.org/test" xsi:type="axis2:SOAPServiceBinding" xmi:id="_Ps1q8Mh0Eea2gbRYRTtYvg" name="SopaTestServiceBinding" targetNamespace="fastconnect.org/test" portTypeQName="wsdl_SopaTest:PortType" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/DemoApp-module/Service%20Descriptors/ServiceDemo.wsdl">
+            <bindingType xmi:id="_Ps2SAMh0Eea2gbRYRTtYvg"/>
+            <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_Rfab0Mh0Eea2gbRYRTtYvg" endpointURI="/SopaTestServiceBinding/getServiceDemo/" httpConnector="http.httpConnection"/>
+            <operationConfiguration xmi:id="_Ps2SAch0Eea2gbRYRTtYvg" operationName="operation" action="operation" actionNeeded="true">
+                <bindingType xmi:id="_Ps2SAsh0Eea2gbRYRTtYvg"/>
+                <messageConfiguration xmi:id="_Ps2SA8h0Eea2gbRYRTtYvg" messageQName="wsdl_SopaTest:operationRequest" wsdlLocation="platform:/resource/DemoApp-module/Service%20Descriptors/ServiceDemo.wsdl">
+                    <messagePartConfigurations xmlns:schema_1482143113890="http://www.example.org/schema/1482143113890" xsi:type="axis2:BodyPartConfiguration" xmi:id="_Ps2SBMh0Eea2gbRYRTtYvg" partName="parameters" partElementName="schema_1482143113890:operationRequest"/>
+                </messageConfiguration>
+                <messageConfiguration xmi:id="_Ps2SBch0Eea2gbRYRTtYvg" messageQName="wsdl_SopaTest:operationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/DemoApp-module/Service%20Descriptors/ServiceDemo.wsdl">
+                    <messagePartConfigurations xmlns:schema_1482143113890="http://www.example.org/schema/1482143113890" xsi:type="axis2:BodyPartConfiguration" xmi:id="_Ps2SBsh0Eea2gbRYRTtYvg" partName="parameters" partElementName="schema_1482143113890:operationResponse"/>
+                </messageConfiguration>
+                <context xmi:id="_Ps2SB8h0Eea2gbRYRTtYvg">
+                    <inputMapping xmi:id="_Ps2SCMh0Eea2gbRYRTtYvg"/>
+                    <outputMapping xmi:id="_Ps2SCch0Eea2gbRYRTtYvg" direction="OUTPUT"/>
+                </context>
+            </operationConfiguration>
+        </scaext:binding>
+        <scact:bindingAdjunct xmi:id="_Ps2SCsh0Eea2gbRYRTtYvg" bindingName="SopaTestServiceBinding"/>
+    </sca:service>
+    <sca:property xmi:id="_RcwKMIF3EeaDU6T8_KZC2w" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_Rc2Q0IF3EeaDU6T8_KZC2w" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_Rc2Q0YF3EeaDU6T8_KZC2w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_Rc8XcIF3EeaDU6T8_KZC2w" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_Rc8XcYF3EeaDU6T8_KZC2w" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_RdCeEIF3EeaDU6T8_KZC2w" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_RdCeEYF3EeaDU6T8_KZC2w" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_RdCeEoF3EeaDU6T8_KZC2w" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_RdIksIF3EeaDU6T8_KZC2w" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_mcUGZqqQEyfNXW5MuRR4cn" name="/JMSStarter/QueueReceivedMessage" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_5eoUpMd2sXOCcsGqoxeXIc" name="/FCLOG/CONNECTION/JDBC/DRIVER" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_umcotbePXvTJO0l66Qlp7t" name="/FCLOG/CONNECTION/JDBC/URL" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_weIrNRuX5yOHGHQoqWqzR3" name="/FCLOG/CONNECTION/JDBC/USER" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_Qphc1ADfpl1FliyFPr1tRQ" name="/FCLOG/CONNECTION/JDBC/PASSWORD" type="property:password" scalable="true" publicAccess="true" scaext:simpleValue="#!vniNW3mg9O8fQtrZ9SjUkw=="/>
+    <sca:property xmi:id="_pszJoSPpS34TOoZH8cG8az" name="/FCLOG/CONNECTION/JMS/URL" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_yKGu8Lwkp4Kd97h1ZV5uYX" name="/FCLOG/CONNECTION/JMS/USER" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_gGc9ErrmvVLO4U5p7ln90I" name="/FCLOG/CONNECTION/JMS/PASSWORD" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_OdNyQV6zM2j13TPNzmaL8V" name="/FCLOG/CONNECTION/JMS/FCLOGQueue/logWarnningQueue" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_2J2UOe6b6DAiX5iTdMNSDE" name="/FCLOG/CONNECTION/JMS/FCLOGQueue/logErrorQueue" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_k2VtHI4sx2VSr62V6ekajV" name="/FCLOG/CONNECTION/JMS/FCLOGQueue/logInfoQueue" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_LFm9igtP1JSGOjXukmemA0" name="/FCLOG/CONNECTION/JMS/JNDI_TOPIC_CONNECTION_FACTORY" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_vs6JDoF3VkIijsCqu1fHfE" name="/FCLOG/CONNECTION/JMS/JNDI_QUEUE_CONNECTION_FACTORY" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_e3DA8SmHeQ5VcXJzNkfm7k" name="/FCLOG/CONNECTION/JMS/JNDI_PASSWORD" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_BTv9gqZTwAoSy17pJd6GCd" name="/FCLOG/CONNECTION/JMS/JNDI_CONTEXT_FACTORY" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_kNMQbL7XPvcA2uMdTI10Sd" name="/FCLOG/CONNECTION/JMS/JNDI_USER" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_VU7BceZZu9PaIMadv0Qbqe" name="/CONNECTION/jms/JmsConnection/url" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_CQKJ11isLUqtqYwneHVbmg" name="/CONNECTION/jms/JmsConnection/username" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_CdXbQz2ZkVAAbsv3hs88CF" name="/CONNECTION/jms/JmsConnection/password" type="property:password" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_L5UQyvny2sq8SPJ6eWWF2i" name="/JMSCONNECTION/QueueReceiveMessage" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_VM4PRwW0J1NcJdSVbdoSOC" name="/CONNECTION/http/httpConnection/hostname" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_edhKyq6SJhNYyZEloytjQ3" name="/CONNECTION/http/httpConnection/port" type="XMLSchema:int" scalable="true" publicAccess="true" scaext:simpleValue="0"/>
+    <sca:component xmi:id="_jJQTSUSApdWXDgdhtI7xOb" name="JMSStarterComponent" compositeext:version="1.0.0.qualifier">
+        <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_wSc0iuijdpMZtgmyrGlp6l" processName="fc.demo.jms.JMSStarter"/>
+    </sca:component>
+    <sca:component xmi:id="_Ti7YEFT9bcvK84nldiw7AX" name="SopaTestComponent" compositeext:version="1.0.0.qualifier">
+        <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_yYou1Vf5t7mleKOtSNYQex" processName="fc.demo.soap.SopaTest"/>
+        <sca:service xmi:id="_OZP8IMh0Eea2gbRYRTtYvg" name="getServiceDemo">
+            <sca:interface.wsdl xmi:id="_OZQjMMh0Eea2gbRYRTtYvg" interface="fastconnect.org/test#wsdl.interface(ServiceDemo)" scaext:wsdlLocation="../Service%20Descriptors/ServiceDemo.wsdl"/>
+        </sca:service>
+    </sca:component>
+</sca:composite>
